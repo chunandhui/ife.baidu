@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+    <input type="text" id="input_text">
+    <button class="button" id="button1">左侧入</button>
+    <button class="button" id="button2">右侧入</button>
+    <button class="button" id="button3">左侧出</button>
+    <button class="button" id="button4">右侧出</button>
+    <div id="content">
+        <!--<p>1</p>
+        <p>2</p>-->
+
+    </div>
+
+<script type="text/javascript">
+
+
+    function button1() {
+        var content = document.getElementById("content");
+        var input_text = document.getElementById("input_text").value;
+        var p = document.createElement("p");
+        p.innerHTML = input_text;
+        if (content.childNodes.length > 0) {
+            content.insertBefore(p,content.firstChild);
+        } else {
+            content.appendChild(p);
+        }
+    }
+
+    function button2(){
+        var content = document.getElementById("content");
+        var input_text = document.getElementById("input_text").value;
+        var p = document.createElement("p");
+        p.innerHTML = input_text;
+        content.appendChild(p);
+    }
+
+    function button3(){
+        var content = document.getElementById("content");
+        if(content.childNodes.length <= 0){
+            alert("没有要删除的元素！");
+            return false;
+        }else{
+            alert("要删除的数字:"+content.firstChild.innerHTML);
+            content.removeChild(content.firstChild);
+        }
+    }
+
+    function button4(){
+        var content = document.getElementById("content");
+        if(content.childNodes.length <= 0){
+            alert("没有要删除的元素！");
+            return false;
+        }else{
+            alert("要删除的数字:"+content.lastChild.innerHTML);
+            content.removeChild(content.lastChild);
+        }
+    }
+
+    document.getElementById("button1").onclick = function(){
+        button1();
+    };
+
+    document.getElementById("button2").onclick = function(){
+        button2();
+    };
+
+    document.getElementById("button3").onclick = function(){
+        button3();
+    };
+
+    document.getElementById("button4").onclick = function(){
+        button4();
+    };
+</script>
+
+    <style>
+        p{
+            display: inline-block;
+            margin-left: 20px;
+            width: 30px;
+            height: 30px;
+            background-color: red;
+        }
+    </style>
+</body>
+</html>
