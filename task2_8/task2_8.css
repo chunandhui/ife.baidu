@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+div{
+    min-width: 50px;
+}
+.box{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    height: 200px;
+    border: 1px solid #000000;
+}
+
+.box1{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    height: 180px;
+    border: 1px solid #000000;
+}
+
+.box2{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    height: 160px;
+    border: 1px solid #000000;
+}
+
+.box3{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    height: 120px;
+    width: 50px;
+    border: 1px solid #000000;
+}
+
+.search{
+    margin-left: 10px;
+}
