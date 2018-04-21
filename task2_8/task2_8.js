@@ -55,10 +55,6 @@ function checkInput(input){
     return 0;
 }
 
-function checkQueue(){
-    orderQueue = orderQueue.splice(0,n);
-}
-
 var rootNode = document.getElementById('box');
 
 window.onload = function(){
