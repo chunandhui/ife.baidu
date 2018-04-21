@@ -66,8 +66,7 @@ window.onload = function(){
         }
         orderQueue = [];
         preOrder(rootNode);
-        resetStyle();
-        alert(orderQueue.length);
+        resetStyle(); 
         scan(input);
     };
     document.getElementById('searchQueue2').onclick = function(){
@@ -78,7 +77,6 @@ window.onload = function(){
         }
         orderQueue = [];
         postOrder(rootNode);
-        alert(orderQueue.length);
         resetStyle();
         scan(input);
     }
